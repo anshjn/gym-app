@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import CircularIcon from './components/CircularIcon';
 import ColorBox from './components/ColorBox';
+import UserName from './components/UserName';
 
 
 export default function App() {
@@ -14,12 +15,17 @@ export default function App() {
         <ColorBox />
         <ColorBox />
       </View>
-      <View style={styles.icon_box}>
-        <CircularIcon />
-        <CircularIcon />
-        <CircularIcon />
-        <CircularIcon />
-        <CircularIcon />
+      <View style={styles.profile}>
+        <View style={styles.icon_box}>
+          <CircularIcon />
+          <CircularIcon />
+          <CircularIcon />
+          <CircularIcon />
+          <CircularIcon />
+        </View>
+        <View style={styles.userdetail}>
+          <UserName />
+        </View>
       </View>
       <StatusBar style="auto" />
     </View>
@@ -37,8 +43,16 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
   },
-  icon_box: {
+  profile: {
     flex: 1,
+    alignItems: 'flexstart',
     flexDirection: 'row',
   },
+  icon_box: {
+    flex: 1.5,
+    flexDirection: 'row',
+  },
+  userdetail: {
+    flex: 0.5,
+  }
 });
