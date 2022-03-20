@@ -14,13 +14,18 @@ export default function ColorBox() {
 const styles = StyleSheet.create({
   colored: {
     flex: 1,
-    textAlign: 'center',
+    padding: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
     backgroundColor: '#dfebb9',
   },
   colored_head: {
     fontSize: '14',
+    color: '#79c0e3',
   },
   colored_para: {
     fontSize: '16',
+    textAlign: 'center',
+    color: '#000000',
   },
 });
