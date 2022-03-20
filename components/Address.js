@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function Address() {
   return (
         <View style={styles.address}>
-            <Icon name='LocationOnOutlined' size={25} style={styles.header_icon}/>
+            <Icon name='Location_on' size={25} style={styles.header_icon}/>
             <Text style={styles.address_title}>Lorem ipsum, or lipsum as it is sometimes known, is dummy text</Text>
         </View>
   );

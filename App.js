@@ -24,12 +24,14 @@ export default function App() {
       <BgSection />
       <View style={styles.up_container}>
         <Header />
-        <VideoHeader />
-        <View style={styles.color_box}>
-          <ColorBox />
-          <ColorBox />
-          <ColorBox />
-          <ColorBox />
+        <View style={styles.video_container}>
+          <VideoHeader />
+          <View style={styles.color_box}>
+            <ColorBox />
+            <ColorBox />
+            <ColorBox />
+            <ColorBox />
+          </View>
         </View>
         <View style={styles.profile}>
           <View style={styles.icon_box}>
@@ -64,6 +66,9 @@ const styles = StyleSheet.create({
   up_container: {
     paddingHorizontal: 16,
     paddingVertical: 30,
+  },
+  video_container: {
+    marginTop: 18,
   },
   bt_container: {
     paddingHorizontal: 16,

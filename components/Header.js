@@ -6,7 +6,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 export default function Header() {
   return (
         <View style={styles.header}>
-            <Icon name='ArrowBackOutlined' size={25} style={styles.header_icon}/>
+            <Icon name='arrow_back' size={25} style={styles.header_icon}/>
             <Text style={styles.header_title}>Holistic Journey Program</Text>
         </View>
   );
