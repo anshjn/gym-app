@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import BtnType from './BtnType';
@@ -52,7 +51,6 @@ const styles = StyleSheet.create({
     },
     list: {
         position: 'relative',
-        // marginTop: 18,
         paddingBottom: 18,
         alignItems: 'flex-start',
         flexDirection: 'row',

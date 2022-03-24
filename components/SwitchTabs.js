@@ -1,10 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, useWindowDimensions } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Ionicons from 'react-native-vector-icons/Ionicons';
-import BtnType from './BtnType';
 import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 
 const Tab = createBottomTabNavigator();
@@ -44,10 +40,6 @@ export default function SwitchTabs() {
         { key: 'fourth', title: 'Yearly' },
     ]);
 
-    
-      
-      //...
-      
       return (
         <TabView
           renderTabBar={props => <TabBar {...props} 
@@ -70,7 +62,6 @@ export default function SwitchTabs() {
         />
       );
 }
-
 
 const styles = StyleSheet.create({
     tabs: {

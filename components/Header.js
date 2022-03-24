@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-export default function Header({title}) {
+export default function Header({title, navigation}) {
   return (
         <View style={styles.header}>
-            <Icon name='arrow_back' size={25} style={styles.header_icon}/>
+            <Icon name='arrow_back' size={25} style={styles.header_icon} onClick={() => navigation.navigate('InitialCards')}/>
             <Text style={styles.header_title}>{title}</Text>
         </View>
   );
