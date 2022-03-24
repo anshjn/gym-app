@@ -2,11 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function ColorBox() {
+export default function ColorBox({color, head, para}) {
   return (
-        <View style={styles.colored}>
-            <Text style={styles.colored_head}>TYPE</Text>
-            <Text style={styles.colored_para}>BODY WEIGHT</Text>
+        <View style={[styles.colored , {backgroundColor: color}]}>
+            <Text style={styles.colored_head}>{head}</Text>
+            <Text style={styles.colored_para}>{para}</Text>
         </View>
   );
 }
@@ -14,17 +14,17 @@ export default function ColorBox() {
 const styles = StyleSheet.create({
   colored: {
     flex: 1,
-    padding: 2,
+    padding: 8,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#dfebb9',
   },
   colored_head: {
-    fontSize: '14',
-    color: '#79c0e3',
+    fontSize: 12,
+    color: '#890F0D',
   },
   colored_para: {
-    fontSize: '16',
+    marginTop: 2,
+    fontSize: 12,
     textAlign: 'center',
     color: '#000000',
   },

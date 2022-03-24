@@ -10,19 +10,23 @@ import { TabView, SceneMap, TabBar } from 'react-native-tab-view';
 const Tab = createBottomTabNavigator();
 
 const FirstRoute = () => (
-    <View style={{ flex: 1, backgroundColor: '#ff4081' }} />
+    <View style={{ flex: 1 }} />
   );
   
   const SecondRoute = () => (
-    <View style={{ flex: 1, backgroundColor: '#673ab7' }} />
+    <View style={{ flex: 1}} />
   );
 
   const ThirdRoute = () => (
-    <View style={{ flex: 1, backgroundColor: '#FA8072' }} />
+    <View style={{ flex: 1}} />
   );
 
   const FourthRoute = () => (
-    <View style={{ flex: 1, backgroundColor: '#6495ED' }} />
+    <View style={{ flex: 1 }} />
+  );
+
+  const FifthRoute = () => (
+    <View style={{ flex: 1 }} />
   );
   
   const renderScene = SceneMap({
@@ -30,34 +34,32 @@ const FirstRoute = () => (
     second: SecondRoute,
     third: ThirdRoute,
     fourth: FourthRoute,
+    fifth: FifthRoute,
   });
 
-export default function SwitchTabs() {
+export default function SwitchHeader() {
 
     const layout = useWindowDimensions();
 
     const [index, setIndex] = React.useState(0);
     const [routes] = React.useState([
-        { key: 'first', title: 'Monthly' },
-        { key: 'second', title: 'Queaterly' },
-        { key: 'third', title: 'Half Yearly' },
-        { key: 'fourth', title: 'Yearly' },
+        { key: 'first', title: 'Tracker' },
+        { key: 'second', title: 'Workouts' },
+        { key: 'third', title: 'Programs' },
+        { key: 'fourth', title: 'Teachers' },
+        { key: 'fifth', title: 'brands' },
     ]);
-
-    
-      
-      //...
-      
+  
       return (
         <TabView
           renderTabBar={props => <TabBar {...props} 
-                                        indicatorStyle={{ backgroundColor: 'blue', borderBottomWidth: 3, borderBottomColor:'blue' }} 
+                                        indicatorStyle={{borderBottomWidth: 3, borderBottomColor:'white' }} 
+                                        style={{backgroundColor:''}}
                                         renderLabel={({ route}) => (
-                                            <Text style={{color: 'black'}}>
+                                            <Text style={{color: 'white'}}>
                                                 {route.title}
                                             </Text>
                                         )}
-                                        style={{ backgroundColor: 'white', borderBottomColor:'black', borderStyle: 'solid', borderBottomWidth: 4 }}
                                   />}
           navigationState={{ index, routes }}
         onIndexChange={setIndex}
@@ -66,6 +68,7 @@ export default function SwitchTabs() {
             second: SecondRoute,
             third: FirstRoute,
             fourth: SecondRoute,
+            fifth: FifthRoute,
         })}
         />
       );
