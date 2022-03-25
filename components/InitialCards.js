@@ -1,20 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import BgSection from './BgSection';
-import BottomNavigate from './BottomNavigate';
 import Card from './Card';
 import CircularSlide from './Circularslide';
 import Header from './Header';
 import SwitchHeader from './SwitchHeader';
-import { Actions } from 'react-native-router-flux';
 
 
-export default function InitialCards() {
-
-    const goToAbout = () => {
-        Actions.InitialCards()
-     }
+export default function InitialCards({navigation}) {
 
   return (
     <>
@@ -30,11 +23,10 @@ export default function InitialCards() {
               <CircularSlide />
             </View>
             <View style={[styles.bt_container, {marginTop: 20, marginBottom: 75}]}>
-                <Card onClick={goToAbout}/>
-                <Card />
-                <Card />
+                <Card navigation={navigation}/>
+                <Card navigation={navigation}/>
+                <Card navigation={navigation}/>
             </View>
-            <BottomNavigate/>
           </View>
     </>
   );

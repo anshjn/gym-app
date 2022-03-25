@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
@@ -25,7 +24,6 @@ const styles = StyleSheet.create({
   user_icon: {
     position: 'relative',
     borderRadius: '50%',
-    // border: 'solid 1px black',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.5,

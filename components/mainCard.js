@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import About from './About';
 import Address from './Address';
 import Benefit from './Benefit';
 import BgSection from './BgSection';
-import BottomNavigate from './BottomNavigate';
 import Card from './Card';
 import CircularIcon from './CircularIcon';
 import ColorBox from './ColorBox';
@@ -17,20 +16,15 @@ import SwitchTabs from './SwitchTabs';
 import UserName from './UserName';
 import VideoHeader from './VideoHeader';
 import Work from './Work';
-import { Actions } from 'react-native-router-flux';
 
 
-export default function MainCard() {
-
-    const goToHome = () => {
-        Actions.MainCard()
-     }
+export default function MainCard({navigation}) {
 
   return (<>
     <View>
       <BgSection />
-      <View style={styles.up_container} onClick={goToHome} >
-        <Header title='Holistic Journey Program'/>
+      <View style={styles.up_container} >
+        <Header title='Holistic Journey Program' navigation={navigation}/>
         <View style={styles.video_container}>
           <VideoHeader />
           <View style={styles.color_box}>
@@ -63,7 +57,6 @@ export default function MainCard() {
         <Work />
         <MuscleGroup />
         <Subscribe />
-        <BottomNavigate />
       </View>
       <StatusBar style="auto" />
     </View>
@@ -84,6 +77,7 @@ const styles = StyleSheet.create({
   },
   bt_container: {
     paddingHorizontal: 16,
+    marginBottom: 50,
   },
   color_box: {
     flex: 1,

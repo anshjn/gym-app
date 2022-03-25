@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import CircularIcon from './CircularIcon';
 import UserName from './UserName';
 
-export default function Card() {
+export default function Card({navigation}) {
     return (
-        <View style={styles.card}>
+        <View style={styles.card} onClick={() => navigation.navigate('MainCard')}>
             <View style={styles.card_experience}>Beginner</View>
             <View style={styles.up_section}>
                 <View style={styles.card_image}>
@@ -15,7 +14,7 @@ export default function Card() {
                 <View style={styles.card_description}>
                     <View style={styles.exercise_details}>
                         <Text style={styles.title}>Custom Programme</Text>
-                        <Text style={styles.details}>Lipsum as it is sometimes known, giving information</Text>
+                        <Text>Lipsum as it is sometimes known, giving information</Text>
                     </View>
                     <View style={styles.exercise_type}>
                         <Text style={styles.type}>Zumba</Text>
@@ -42,7 +41,6 @@ const styles = StyleSheet.create({
         position: 'relative',
         marginTop: 20,
         borderRadius: 16,
-        // border: 'solid 1px #000000',
         shadowColor: '#000',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.5,
@@ -89,14 +87,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-    },
-    details: {
-        // textoverflow: 'ellipsis',
-        // overflow: 'hidden',
-        // display: '-webkit-box',
-        // webkitlineclamp: 2,
-        // -webkit-box-orient: vertical;
-        // white-space: normal;
     },
     type: {
         fontSize: 12,
